@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'public sans';
+}
+.cont{
+    background-image: url(imagenes/trebol-loteria-de-navidad-la-siete-albacete-comprar-loteria-nacional-loteria-navidad-bonoloto-euromillones-primitiva-quiniela-loto-turf-www.loteriasyeuromillones.com_.png.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+    height:100vh;
+    display: grid;
+    place-items: center;
+}
+.caja{
+    width:400px;
+    height:400px;
+    background:url(imagenes/hojas_trebol.jpg);
+    background-size: cover;
+    position: relative;
+    border-radius: 15px;
+     padding: 10px; 
+}
+.input{
+    background: rgb(255, 255, 255);
+    text-align: center;
+    width:90%;
+    height:50px;
+    margin: 5px auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+.entrada{
+    width:100%;
+    height:100%;
+    box-sizing: border-box;
+    border: none;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+.cont_msj{
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    background:rgb(255, 255, 255,.5);
+    text-shadow: 0 0 5px  rgb(255, 255, 255);
+}
+.salida{
+    background: chartreuse;
+    width:90%;
+    height:50px;
+    border-radius: 5px;
+    margin: auto;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    display: none;
+}
+.botones{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    right:45%;
+    background: linear-gradient(45deg,rgb(66, 1, 1) 0%,rgb(0, 128, 0) 15%,rgb(0, 0, 255) 25%,
+    rgb(250, 250, 70) 50%,rgb(255, 0, 0) 65%,
+    rgb(255, 255, 255) 70%, rgb(3, 255, 3) 85%, rgb(0, 242, 255) 100%);
+    animation: anima linear 5s infinite;
+}
+@keyframes anima{
+    0%{background-position: 0;}
+    50%{background-position: 200px;}
+    100%{background-position: 400px;}
+}
+.botones button{
+    width:90%;
+    height:90%;
+    border: none;
+    border-radius: 50%;
+}
+.jugar,.reset{
+    cursor: pointer;
+    font-size: 15px;
+    font-weight:bold
+}
+.jugar{
+    background: rgb(0, 77, 0);
+    color:rgb(255, 255, 255)
+}
+.reset{
+    display: none;
+    background: rgb(255, 200, 2);
+    color:rgb(0, 0, 0)
+}
+.ms_resultado{
+    background: black;
+    width:100%;
+    height:100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-200%);
+}
+.ver_ms{
+    transform: translateY(0%);
+}
+.ms_resultado p{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width:90%;
+    height:100px;
+    line-height: 100px;
+    font-size: 50px;
+    border-radius: 5px;
+}
+
+@media (max-width:576px){
+    .cont{
+        align-items: flex-start;
+    }
+    .caja{
+        width:100%;
+    }
+    .entrada,.salida{
+        font-size: 18px;
+    }
+}
