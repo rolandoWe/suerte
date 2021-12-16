@@ -10,7 +10,9 @@ body{
     background-image: url(imagenes/trebol-loteria-de-navidad-la-siete-albacete-comprar-loteria-nacional-loteria-navidad-bonoloto-euromillones-primitiva-quiniela-loto-turf-www.loteriasyeuromillones.com_.png.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    margin: auto;
     width:100%;
+    max-width: 1100px;
     height:100vh;
     display: grid;
     place-items: center;

@@ -6,8 +6,30 @@ let reset=document.querySelector(".reset");
 let ms_resultado=document.querySelector(".ms_resultado");
 let ms_p=document.querySelector(".ms_p");
 jugar.addEventListener("click",function(){
-    evaluar()
+  soloNumeros();
+
 })
+function soloNumeros(){
+    let input=entrada.value;
+    let permitido="0123456789";
+    let contar=0;
+    for(i=0;i<=input.length-1;i++){
+        for(x=0;x<=permitido.length-1;x++){
+            if(input[i]==permitido[x]){
+                contar++;
+            }
+        }
+    }
+    if(input.length==contar){
+    // Aqui llamamos a la funcion evaluar()
+  evaluar()
+    }else{
+        salida.style.display="block";
+        salida.style.background="yellow";
+        salida.style.color="rgb(0, 0, 0)";
+        salida.innerHTML="Ingrese solo numeros"
+    }
+}
 function evaluar(){
 // creamos un numero aleatorio entre 0 y 99****
     let ran=Math.round(Math.random()*99)
