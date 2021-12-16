@@ -27,7 +27,11 @@ function soloNumeros(){
         salida.style.display="block";
         salida.style.background="yellow";
         salida.style.color="rgb(0, 0, 0)";
-        salida.innerHTML="Ingrese solo numeros"
+        salida.innerHTML="Ingrese solo numeros";
+        setTimeout(function(){
+        salida.style.display="none";
+
+        },2000)
     }
 }
 function evaluar(){
@@ -50,8 +54,8 @@ function evaluar(){
         }else{
             ran;
         }
-        salida.innerHTML=ran;
-        salida.style.background="rgb(1, 87, 1)";
+        salida.innerHTML="Salió el: "+ran;
+        salida.style.background="rgb(1, 87, 1,.5)";
         salida.style.color="rgb(255, 255, 255)";
         jugar.style.display="none";
         reset.style.display="block";
@@ -60,10 +64,10 @@ function evaluar(){
 }
 function comparar(){
     // si el valor ingresado es menor a 10, la funcion le agrega un cero antes**
-    if(entrada.value<10){
-        entrada.value="0"+entrada.value
+    if(entrada.value<10 && entrada.value.length<2){
+        entrada.value="Ingresaste el: "+"0"+entrada.value
     }else{
-        entrada.value
+        entrada.value="Ingresaste el: "+entrada.value
     }
 // si el valor ingresado es igual al numero random, se ejecuta la siguiente condición***
     if(entrada.value==salida.innerHTML){
@@ -71,7 +75,7 @@ function comparar(){
         ms_resultado.style.background="rgb(1, 87, 1)";
         ms_p.innerHTML="Ganador 😊";
         salida.style.color="rgb(255, 255, 255)";
-        salida.style.background="rgb(1, 87, 1)";
+        salida.style.background="rgb(1, 87, 1,.8)";
 
         setTimeout(function(){
         ms_resultado.classList.toggle("ver_ms");
@@ -79,7 +83,7 @@ function comparar(){
     }else{
         ms_resultado.classList.toggle("ver_ms");
         ms_resultado.style.background="rgb(128, 1, 1)";
-        salida.style.background="rgb(128, 1, 1)";
+        salida.style.background="rgb(128, 1, 1,.8)";
         salida.style.color="rgb(255, 255, 255)";
         ms_p.innerHTML="Perdedor 😥";
         setTimeout(function(){
