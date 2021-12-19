@@ -45,7 +45,7 @@ function soloNumeros(){
 }
 function evaluar(){
 // creamos un numero aleatorio entre 0 y 99****
-    var ran=Math.round(Math.random()*5)
+    var ran=Math.round(Math.random()*99)
 // Esta condicion evalua si el campo esta vacio o no**
     if(entrada.value==""){
         salida.style.display="block";
