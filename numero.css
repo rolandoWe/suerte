@@ -7,7 +7,7 @@ body{
     font-family: 'public sans';
 }
 .cont{
-    background-image: url(imagenes/trebol-loteria-de-navidad-la-siete-albacete-comprar-loteria-nacional-loteria-navidad-bonoloto-euromillones-primitiva-quiniela-loto-turf-www.loteriasyeuromillones.com_.png.jpg);
+    background-image:linear-gradient(rgb(255, 255, 255,.5) 0%,rgb(255,255,255,.5) 100%),url(imagenes/trebol-loteria-de-navidad-la-siete-albacete-comprar-loteria-nacional-loteria-navidad-bonoloto-euromillones-primitiva-quiniela-loto-turf-www.loteriasyeuromillones.com_.png.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     margin: auto;
@@ -17,29 +17,39 @@ body{
     display: grid;
     place-items: center;
 }
+.rojo{
+    background: rgb(255, 0, 0);
+}
 .caja{
     width:400px;
     height:400px;
-    background:url(imagenes/hojas_trebol.jpg);
+    background-image:linear-gradient( rgba(221, 221, 221, 0.6) 0%, rgba(60, 255, 0, 0.6) 50%,
+     rgba(221, 221, 221, 0.6) 100%),
+    url(imagenes/hojas_trebol.jpg);
+    
     background-size: cover;
     position: relative;
     border-radius: 15px;
      padding: 10px; 
+     box-shadow: 0 0 15px 5px white;
+     /* display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center; */
 }
 .input{
-    background: rgb(255, 255, 255,.8);
+    background: rgb(255, 255, 255,.9);
     text-align: center;
+    display: flex;
+    justify-content: space-around;
     width:90%;
     height:50px;
     margin: 5px auto;
     padding: 10px;
     border-radius: 5px;
 }
-.input input{
-    background: transparent;
-}
 .entrada{
-    width:100%;
+    width:90%;
     height:100%;
     box-sizing: border-box;
     border: none;
@@ -51,22 +61,23 @@ body{
     padding: 5px;
     font-size: 18px;
     font-weight: bold;
-    background:rgb(255, 255, 255,.5);
+    background:rgba(226, 225, 225, 0.9);
     text-shadow: 0 0 5px  rgb(255, 255, 255);
     border-radius: 5px;
 }
 .salida{
-    background: chartreuse;
+    background: rgb(232, 233, 231);
     width:90%;
     height:50px;
     border-radius: 5px;
     margin: auto;
     text-align: center;
-    line-height: 30px;
+    line-height: 50px;
     font-size: 30px;
     font-weight: bold;
-    padding: 10px;
-    display: none;
+    padding-left: 20px;
+    color:rgb(0, 0, 0,.1);
+    margin-top:20px
 }
 .botones{
     width:50px;
@@ -124,19 +135,51 @@ body{
 .ver_ms{
     transform: translateY(0%);
 }
+.cerrar_suerte{
+    color:rgb(0, 0, 0);
+    background: red;
+    width:30px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight:bold;
+    position: absolute;
+    top:10px;
+    right:10px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.num_gane{
+    color:rgb(255, 255, 255,.6);
+    background: rgb(22, 93, 0);
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: bold;
+
+}
+.num{
+    color:rgb(0, 0, 0,.6);
+    width:50px;
+    height:50px;
+    background: rgb(255, 0, 0,.5);
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: bold;
+}
 .ms_resultado p{
     color: rgb(255, 255, 255);
     text-align: center;
     width:90%;
-    height:100px;
-    line-height: 100px;
-    font-size: 50px;
+    padding: 10px 0;
+    font-size: 40px;
     border-radius: 5px;
 }
 
 /* ********************footer**************** */
 .footer{
-    /* background: blue; */
     width:100%
 }
 .copy{
@@ -164,5 +207,10 @@ body{
     }
     .entrada,.salida{
         font-size: 18px;
+    }
+    .ms_resultado p{
+        width:100%;
+        font-size: 30px;
+        line-height: 40px;
     }
 }
