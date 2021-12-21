@@ -91,7 +91,7 @@ function comparar(){
         ms_p.style.color="rgb(0, 255, 0)";
         ms_p.style.border="solid rgb(0,255,255) 2px";
 
-        ms_p.innerHTML="Ganaste 😊 👏👏👏👏"+"<br>"+"Ingresaste el numero: "+"<span class='num_gane'>"+entrada.value+"</span>"+"<br>"+
+        ms_p.innerHTML="Ganaste 😊 👏👏👏"+"<br>"+"Ingresaste el numero: "+"<span class='num_gane'>"+entrada.value+"</span>"+"<br>"+
         "Salio el numero: "+"<span class=' num_gane'>"+salida.innerHTML+"</span>";;
         salida.style.color="rgb(255, 255, 255)";
         salida.style.background="rgb(1, 87, 1,.8)";
