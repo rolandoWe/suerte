@@ -101,12 +101,12 @@ function comparar(){
         // },4000)
     }else{
         ms_resultado.classList.toggle("ver_ms");
-        ms_resultado.style.background="rgb(209, 209, 209)";
+        ms_resultado.style.background="rgb(0, 155, 255)";
         salida.style.background="rgb(128, 1, 1,.8)";
         salida.style.color="rgb(255, 255, 255)";
         ms_p.style.color="rgb(255, 0, 0)";
-        ms_p.style.border="solid red 2px";
-        ms_p.style.background="rgb(255, 255, 255, 0.5)";
+        // ms_p.style.border="solid red 2px";
+        ms_p.style.background="rgb(0, 0, 0)";
         ms_p.innerHTML="Perdiste 😥"+"<br>"+"Ingresaste el numero: "+"<span class='num'>"+entrada.value+"</span>"+"<br>"+
         "Salio el numero: "+"<span class=' num'>"+salida.innerHTML+"</span>";
         // setTimeout(function(){
